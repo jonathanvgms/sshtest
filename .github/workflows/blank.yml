@@ -26,9 +26,11 @@ jobs:
       - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
-      - name: Execute SSH commmands on remote server
-        uses: JimCronqvist/action-ssh@master
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@v1
         with:
-          hosts: 'novit@0.tcp.sa.ngrok.io:17178'
-          privateKey: ${{ secrets.NOVIT_PRIVATE_KEY }}
-          command: ls -al
+          host: 0.tcp.sa.ngrok.io
+          username: novit
+          key: ${{ secrets.NOVIT_PRIVATEKEY }}
+          port: 17178
+          script: whoami
