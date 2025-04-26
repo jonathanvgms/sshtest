@@ -31,6 +31,6 @@ jobs:
         with:
           host: 0.tcp.sa.ngrok.io
           username: novit
-          key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHqSfaR4rKJvFRGz2HpUELERA/t5FshblSMHOF4VhNrB jonathan.velazquez@novit.com.ar
+          key: ${{ secrets.KEY }}
           port: 17178
           script: whoami
