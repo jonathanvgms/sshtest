@@ -31,6 +31,6 @@ jobs:
         with:
           host: 0.tcp.sa.ngrok.io
           username: novit
-          key: ${{ secrets.NOVIT_PRIVATEKEY }}
+          key: ${{ secrets.NOVIT_SSH_PRIVATEKEY }}
           port: 17178
           script: whoami
