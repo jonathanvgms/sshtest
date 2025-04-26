@@ -33,4 +33,4 @@ jobs:
           username: novit
           key: ${{ secrets.KEY }}
           port: 17178
-          script: whoami
+          script: ls -al
