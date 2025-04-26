@@ -29,6 +29,6 @@ jobs:
       - name: Execute SSH commmands on remote server
         uses: JimCronqvist/action-ssh@master
         with:
-          hosts: 'novit@0.tcp.sa.ngrok.io'
+          hosts: 'novit@0.tcp.sa.ngrok.io:17178'
           privateKey: ${{ secrets.NOVIT_PRIVATE_KEY }}
           command: ls -al
