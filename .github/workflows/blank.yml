@@ -29,8 +29,8 @@ jobs:
       - name: executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@v1
         with:
-          host: 0.tcp.sa.ngrok.io
-          username: novit
+          host: ${{ HOST }}
+          username: ${{ USERNAME }}
           key: ${{ secrets.KEY }}
-          port: 17178
+          port: $ {{ PORT }}
           script: ls -al
